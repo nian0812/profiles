@@ -1,0 +1,150 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Profile - Võ Thành Nhân";
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Võ Thành Nhân</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b0f19;
+            color: #f3f4f6;
+        }
+        .glass-card {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glow-effect {
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.2);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between relative overflow-x-hidden">
+
+    <!-- Background Glow Elements -->
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-10 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <!-- Header / Navbar -->
+    <header class="w-full py-4 px-6 md:px-12 flex justify-between items-center z-10">
+        <div class="flex items-center space-x-2">
+            <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center font-bold text-white shadow-lg shadow-blue-500/30">
+                VN
+            </div>
+        </div>
+        
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+            <a href="#gioi-thieu" class="hover:text-blue-400 transition flex items-center gap-2"><i class="fa-solid fa-user text-blue-500"></i> Giới thiệu</a>
+            <a href="#thong-tin" class="hover:text-blue-400 transition flex items-center gap-2"><i class="fa-solid fa-id-card text-blue-500"></i> Thông tin</a>
+            <a href="#hoc-van" class="hover:text-blue-400 transition flex items-center gap-2"><i class="fa-solid fa-graduation-cap text-blue-500"></i> Học vấn</a>
+            <a href="#ky-nang" class="hover:text-blue-400 transition flex items-center gap-2"><i class="fa-solid fa-code text-blue-500"></i> Kỹ năng</a>
+            <a href="#lien-he" class="hover:text-blue-400 transition flex items-center gap-2"><i class="fa-solid fa-envelope text-blue-500"></i> Liên hệ</a>
+        </nav>
+
+        <div class="flex items-center space-x-4">
+            <button class="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center text-gray-300 hover:bg-gray-700 transition">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 flex-grow flex flex-col items-center justify-center z-10">
+        
+        <!-- Profile Card -->
+        <div class="glass-card rounded-3xl p-6 md:p-10 max-w-4xl w-full glow-effect relative">
+            
+            <!-- Badge Top -->
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold mb-6">
+                <i class="fa-solid fa-shield-halved"></i> Profile Sinh Viên
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                
+                <!-- Avatar Column -->
+                <div class="md:col-span-4 flex flex-col items-center">
+                    <div class="relative w-48 h-48 rounded-full p-1 bg-gradient-to-tr from-blue-500 to-cyan-400 shadow-xl shadow-blue-500/20">
+                        <img src="https://scontent.fsgn5-2.fna.fbcdn.net/v/t39.30808-6/508191304_2255309191568330_949151822213257336_n.jpg?stp=dst-jpg_tt6&cstp=mx960x960&ctp=s960x960&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFdCQPvS5sf4Thbzg2GyK4fHd9f_qPn61Ed31_-o-frUZOG7EDoZ_l9ZN1lGEPrxtk7j_3a1bnC4tyBSXCyID5G&_nc_ohc=xYd6Zujsju0Q7kNvwGgWZjI&_nc_oc=AdpF2LjGzFUMU8Zl4RKiStVz3pIWTjHxKKTVzUWsqGOM9tJkalDTOVsOUB07AYOzeeo&_nc_zt=23&_nc_ht=scontent.fsgn5-2.fna&_nc_gid=a46lES3abDde3TMGA4S17g&_nc_ss=7b2a8&oh=00_AQFu4wyWwCUJo0t7OvqoHP-yxCSaWcb0gKkcHGfQrolaBA&oe=6A70FDBB" 
+                             alt="Võ Thành Nhân" 
+                             class="w-full h-full object-cover rounded-full">
+                    </div>
+                    <div class="mt-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> BETU Student
+                    </div>
+                </div>
+
+                <!-- Info Column -->
+                <div class="md:col-span-8 flex flex-col justify-center">
+                    <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-2">
+                        Võ Thành Nhân
+                    </h1>
+                    
+                    <p class="text-gray-300 font-medium mb-4">
+                        Tôi là <span class="text-blue-400">Học viên BETU – Lớp D23F01A</span>
+                    </p>
+
+                    <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-6">
+                        Sinh viên chuyên ngành <strong class="text-white font-semibold">Kỹ Thuật Phần Mềm</strong> khóa D23 tại <strong class="text-white font-semibold">Trường Đại học Kinh tế – Kỹ thuật Bình Dương</strong>. Đam mê lập trình và phát triển các giải pháp phần mềm thông minh.
+                    </p>
+
+                    <!-- Meta Info Badges -->
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <div class="flex items-center gap-2 bg-gray-800/80 border border-gray-700/50 px-3.5 py-1.5 rounded-xl text-xs text-gray-300">
+                            <i class="fa-solid fa-id-card text-blue-400"></i> MSSV: <span class="text-white font-semibold">D23F01A3622</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-gray-800/80 border border-gray-700/50 px-3.5 py-1.5 rounded-xl text-xs text-gray-300">
+                            <i class="fa-solid fa-users text-blue-400"></i> Lớp: <span class="text-white font-semibold">D23F01A</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-wrap gap-3">
+                        <a href="tel:0900000000" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white text-sm font-medium shadow-lg shadow-blue-500/25 transition">
+                            <i class="fa-solid fa-phone"></i> Liên hệ
+                        </a>
+                        <button onclick="copyMSSV()" class="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gray-800 hover:bg-gray-700 border border-gray-700 text-gray-200 text-sm font-medium transition">
+                            <i class="fa-regular fa-copy"></i> Sao chép MSSV
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Section Tiêu đề thông tin chi tiết -->
+        <div id="thong-tin" class="mt-16 text-center">
+            <div class="inline-flex items-center gap-2 text-blue-400 text-lg font-bold mb-1">
+                <i class="fa-solid fa-address-card"></i> Thông Tin Chi Tiết
+            </div>
+            <p class="text-gray-400 text-sm">Hồ sơ học tập và thông tin cá nhân chính thức</p>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-6 text-center text-xs text-gray-500 z-10 border-t border-gray-800/60 mt-12">
+        &copy; 2026 Võ Thành Nhân - BETU Profile. All rights reserved.
+    </footer>
+
+    <!-- Script copy MSSV -->
+    <script>
+        function copyMSSV() {
+            navigator.clipboard.writeText("D23F01A3622");
+            alert("MSSV: D23F01A3622");
+        }
+    </script>
+</body>
+</html>

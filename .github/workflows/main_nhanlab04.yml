@@ -62,4 +62,4 @@ jobs:
           app-name: 'NhanLab04'
           slot-name: 'Production'
           package: .
-          update
+          

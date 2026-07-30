@@ -198,3 +198,4 @@ D:\inventory\obj\Debug\net10.0\refint\inventory.dll
 D:\inventory\obj\Debug\net10.0\inventory.pdb
 D:\inventory\obj\Debug\net10.0\inventory.genruntimeconfig.cache
 D:\inventory\obj\Debug\net10.0\ref\inventory.dll
+D:\inventory\obj\Debug\net10.0\inventory.sourcelink.json

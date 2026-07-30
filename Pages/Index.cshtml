@@ -18,16 +18,39 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0b0f19;
+            /* Đổi nền thành màu xanh da trời và chèn ảnh bãi biển */
+            background-color: #87CEEB;
+            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
             color: #f3f4f6;
         }
+        
         .glass-card {
-            background: rgba(17, 24, 39, 0.7);
+            /* Giảm độ mờ màu đen xuống 0.6 để thấy bãi biển rõ hơn */
+            background: rgba(17, 24, 39, 0.6);
             backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
+        
         .glow-effect {
             box-shadow: 0 0 25px rgba(59, 130, 246, 0.2);
+        }
+
+        /* --- HIỆU ỨNG HACKER NHẤP NHÁY --- */
+        @@keyframes hackerGlitch {
+            0% { transform: translateY(0px); text-shadow: 2px 0px #00ff00, -2px 0px #ff00ff; }
+            20% { transform: translateY(-3px); text-shadow: -2px 0px #00ff00, 2px 0px #ff00ff; }
+            40% { transform: translateY(2px); color: #00ff00; }
+            60% { transform: translateY(-2px); text-shadow: 2px 0px #00ff00, -2px 0px #ff00ff; }
+            80% { transform: translateY(3px); color: #ffffff; }
+            100% { transform: translateY(0px); text-shadow: -2px 0px #00ff00, 2px 0px #ff00ff; }
+        }
+
+        .hacker-text {
+            animation: hackerGlitch 0.2s infinite; /* Nhấp nháy liên tục */
         }
     </style>
 </head>
@@ -87,7 +110,8 @@
 
                 <!-- Info Column -->
                 <div class="md:col-span-8 flex flex-col justify-center">
-                    <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-2">
+                    <!-- ĐÃ THÊM CLASS hacker-text VÀO TÊN -->
+                    <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-2 hacker-text">
                         Võ Thành Nhân
                     </h1>
                     
@@ -95,7 +119,8 @@
                         Tôi là <span class="text-blue-400">Học viên BETU – Lớp D23F01A</span>
                     </p>
 
-                    <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-6">
+                    <!-- ĐÃ THÊM CLASS hacker-text VÀO GIỚI THIỆU -->
+                    <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-6 hacker-text">
                         Sinh viên chuyên ngành <strong class="text-white font-semibold">Kỹ Thuật Phần Mềm</strong> khóa D23 tại <strong class="text-white font-semibold">Trường Đại học Kinh tế – Kỹ thuật Bình Dương</strong>. Đam mê lập trình và phát triển các giải pháp phần mềm thông minh.
                     </p>
 
@@ -135,7 +160,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="w-full py-6 text-center text-xs text-gray-500 z-10 border-t border-gray-800/60 mt-12">
+    <footer class="w-full py-6 text-center text-xs text-gray-500 z-10 border-t border-gray-800/60 mt-12 backdrop-blur-md bg-black/30">
         &copy; 2026 Võ Thành Nhân - BETU Profile. All rights reserved.
     </footer>
 
